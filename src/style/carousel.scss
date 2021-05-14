@@ -1,0 +1,67 @@
+.rec.rec-carousel-wrapper:focus,
+.rec.rec-carousel-wrapper .rec-carousel:focus,
+.rec.rec-carousel-wrapper .rec-slider-container:focus,
+.rec.rec-carousel-wrapper .rec-slider-container .rec-slider:focus,
+.rec.rec-carousel-wrapper .rec-slider-container .rec-slider div:focus {
+	outline: none;
+}
+
+.rec.rec-carousel {
+	padding: 60px 0px;
+	background: $main-blue;
+}
+
+//color behind images that can't expand completely
+.rec.rec-carousel-wrapper .rec-slider-container {
+	background: $main-blue;
+}
+
+/* Both Arrow Styles */
+
+.rec.rec-carousel-wrapper .rec-carousel button {
+	background: transparent;
+	color: black;
+}
+
+.rec.rec-carousel-wrapper .rec-pagination .rec.rec-dot.rec {
+	box-shadow: none;
+	background: $light-grey;
+}
+
+.rec.rec-carousel-wrapper .rec-pagination .rec.rec-dot.rec.rec-dot_active {
+	background: $main-grey;
+}
+
+//left arrow
+
+button.sc-bdvvaa.hSiCVM.rec.rec-arrow.rec.rec-arrow-left {
+	margin-left: -50px;
+}
+button.sc-bdvvaa.bSWeAW.rec.rec-arrow.rec.rec-arrow-left {
+	margin-left: -50px;
+}
+//right arrow
+
+button.sc-bdvvaa.bSWeAW.rec.rec-arrow.rec.rec-arrow-right {
+	margin-right: -50px;
+}
+button.sc-bdvvaa.hSiCVM.rec.rec-arrow.rec.rec-arrow-right {
+	margin-right: -50px;
+}
+//slider container
+
+.sc-dkPtyc.imakzv.rec.rec-slider-container {
+	margin: 0px;
+	position: relative;
+}
+
+//pagination
+
+.sc-iCfLBT.kGrYtS.rec.rec-pagination {
+	margin-top: -38px;
+}
+
+.rec.rec-carousel-wrapper .rec-pagination .rec.rec-dot.rec {
+	border-radius: 0;
+	width: 72px;
+}
