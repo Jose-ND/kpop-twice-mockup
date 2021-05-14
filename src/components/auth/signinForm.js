@@ -17,16 +17,19 @@ let SignInForm = (props) => {
 
 
     const checkLogin = () => {
-        axios.post('localhost', {
-            
-        })
+        
     }
 
 
     const onLoginSubmit = e => {
         e.preventDefault();
-        console.log({email, password})
-        // import action to check input
+
+        axios.post('localhost', { email, password })
+        .then(response => {
+            console.log(response);
+            console.log(response.data)
+        })
+
         setEmail('');
         setPassword('');
     }
@@ -59,7 +62,7 @@ let SignInForm = (props) => {
             onClick: () => console.log('forgot password')
         }
     ]
-
+// lolf
 
     return (
 
