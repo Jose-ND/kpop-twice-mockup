@@ -9,12 +9,14 @@ import About from './pages/about';
 import Contact from './pages/contact';
 import Account from './pages/account';
 import NoMatch from './pages/no-match';
-
+import axios from 'axios';
 import Icons from '../helpers/icons';
 import Signin from './auth/signin';
 import Signup from './auth/signup';
 
 
+
+axios.default.baseURL = 'http://127.0.0.1:5000/';
 
 function App() {
   Icons();

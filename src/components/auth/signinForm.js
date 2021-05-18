@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-
 import { useDispatch, useSelector } from 'react-redux';
-import { reduxForm, Field } from 'redux-form';
+
 
 import { FormInput, BlueButton } from '../formFields';
 import Details from '../details';
 
-import history from '../../history';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 let SignInForm = (props) => {
+    const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -24,10 +24,16 @@ let SignInForm = (props) => {
     const onLoginSubmit = e => {
         e.preventDefault();
 
-        axios.post('localhost', { email, password })
+        axios.post('login', { email, password })
         .then(response => {
             console.log(response);
             console.log(response.data)
+        })
+        .then(response => {
+            console.log('we in')
+        })
+            .catch(error => {
+            console.log(error)
         })
 
         setEmail('');
@@ -35,7 +41,7 @@ let SignInForm = (props) => {
     }
 
     const onChangeEmail = e => {
-        const some = e.target.name;
+
         const emailValue = e.target.value;
         setEmail(emailValue);
         //console.log(some, {some})
@@ -49,7 +55,7 @@ let SignInForm = (props) => {
         {
             _id: 0,
             title: 'Not registered? Create account here',
-            onClick: () => history.push('/')
+            onClick: () => history.push('/signup')
         },
         {
             _id: 1,
@@ -62,7 +68,7 @@ let SignInForm = (props) => {
             onClick: () => console.log('forgot password')
         }
     ]
-// lolf
+
 
     return (
 
@@ -72,7 +78,7 @@ let SignInForm = (props) => {
                     <input
                         type='email'
                         className='form-input__input'
-                        name='lol'
+                        name='email'
                         value={email}
                         onChange={onChangeEmail}
                         placeholder='Email'
@@ -94,8 +100,9 @@ let SignInForm = (props) => {
             
                 <div className='sign-in-form__login form-button'>
                     <button
-                        className='form-button__button form-button__button'
-                        type='submit'>
+                        className='form-button__button'
+                        type='submit'
+                        disabled={!email}>
                         Login
                     </button>
                 </div>
@@ -107,8 +114,6 @@ let SignInForm = (props) => {
 }
 
 
-SignInForm = reduxForm({
-    form: 'SignInForm'
-})(SignInForm);
+
 
 export default SignInForm;

@@ -1,5 +1,6 @@
 import {
     FETCH_USER_REQUEST,
+    USER_INITIAL_STATE,
     USER_LOGIN_SUCCESS,
     USER_LOGIN_FAILURE,
     USER_LOGOUT
@@ -13,6 +14,7 @@ const INITIAL_STATE = {
         first_name: '',
         id: -1,
         last_name: '',
+        isLoggedIn: null,
         password: ''
     },
     error: ''
@@ -25,6 +27,16 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 loading: true,
                 user: {}
+            }
+        case USER_INITIAL_STATE:
+            return {
+                ...state,
+                loading: false,
+                user: {
+                    ...state.user,
+                    isLoggedIn: null,
+                    error: ''
+                }
             }
         case USER_LOGIN_SUCCESS:
             return {

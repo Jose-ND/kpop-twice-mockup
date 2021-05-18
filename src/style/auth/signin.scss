@@ -13,6 +13,13 @@
 		grid-template-columns: 1fr;
 	}
 }
+
+.title-feed-form-wrapper {
+	max-width: 1170px;
+	padding: 0 50px;
+	margin: 0 auto;
+}
+
 .sign-in-form {
 	& > * {
 		grid-column: 1/-1;

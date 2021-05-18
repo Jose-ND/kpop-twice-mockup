@@ -15,8 +15,12 @@ const onSubmit = (values) => {
 let SignIn = () => {
     return (
         <div className='sign-in'>
-            <PageTitle className='sign-in__page-title' title='Login'/>
-            <SignInForm className='sign-in__form' onSubmit={onSubmit}/>
+            {/* alternative navbar  */}
+            <div className='title-feed-form-wrapper'>
+                {/* signin feedback according to loggedIn status */}
+                <PageTitle className='sign-in__page-title' title='Login'/>
+                <SignInForm className='sign-in__form' onSubmit={onSubmit} />
+            </div>    
         </div>
     )
 }
