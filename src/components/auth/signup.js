@@ -9,9 +9,11 @@ const SignUp = () => {
    
     return (
         <div className='sign-up'>
-            <PageTitle className='sign-up__page-title' title='Register' />
-            <SignUpForm/>
-
+            {/* alternative navbar */}
+            <div className='title-feed-form-wrapper'>
+                <PageTitle className='sign-up__page-title' title='Register' />
+                <SignUpForm/>
+            </div>
         </div>
     )
 }

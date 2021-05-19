@@ -81,7 +81,7 @@ function Navbar() {
                     </Link>
                     
                     {/* nav to viewing items in cart pop-up */}
-                    <Link to='/' className='icon-item'>
+                    <Link to='/order/review' className='icon-item'>
                         <FontAwesomeIcon icon='shopping-bag'/>
                     </Link>
                 </div>

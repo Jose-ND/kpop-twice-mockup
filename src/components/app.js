@@ -2,17 +2,18 @@ import React from 'react';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Icons from '../helpers/icons';
+import axios from 'axios';
 
+import NoMatch from './pages/no-match';
 import Home from './pages/home';
 import Shop from './pages/shop';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Account from './pages/account';
-import NoMatch from './pages/no-match';
-import axios from 'axios';
-import Icons from '../helpers/icons';
 import Signin from './auth/signin';
 import Signup from './auth/signup';
+import Review from './order/review';
 
 
 
@@ -25,9 +26,10 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/' component={Home}/> 
-          <Route path='/shop' component={Shop}/> 
           <Route path='/signin' component={Signin}/>
           <Route path='/signup' component={Signup}/>
+          <Route path='/shop' component={Shop}/> 
+          <Route path='/order/review' component={Review}/> 
           <Route path='/about' component={About}/>
           <Route path='/contact' component={Contact}/>
           <Route path='/account' component={Account}/>
