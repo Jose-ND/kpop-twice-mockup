@@ -1,12 +1,7 @@
 import React, { useState }from 'react';
 import { Link } from 'react-router-dom';
 
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-
-
-
 
 const dynamicLinks = [
     {
@@ -15,6 +10,7 @@ const dynamicLinks = [
     },
     {
         text: 'Shop',
+        //link: '/shop'
         link: '/shop'
     },
     {

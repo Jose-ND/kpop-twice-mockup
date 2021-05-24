@@ -14,26 +14,33 @@ import Account from './pages/account';
 import Signin from './auth/signin';
 import Signup from './auth/signup';
 import Review from './order/review';
+import Products from './shop/products';
+import ProductDetail from './shop/productDetail';
+import ShopCategory from './shop/shopCategory';
 
 
 
-axios.default.baseURL = 'http://127.0.0.1:5000/';
+axios.defaults.baseURL = 'http://127.0.0.1:5000/';
 
 function App() {
   Icons();
   return (
-    <div className='container'>
+    <div>
       <Router>
         <Switch>
           <Route exact path='/' component={Home}/> 
-          <Route path='/signin' component={Signin}/>
-          <Route path='/signup' component={Signup}/>
-          <Route path='/shop' component={Shop}/> 
-          <Route path='/order/review' component={Review}/> 
-          <Route path='/about' component={About}/>
-          <Route path='/contact' component={Contact}/>
-          <Route path='/account' component={Account}/>
+          <Route exact path='/signin' component={Signin}/>
+          <Route exact path='/signup' component={Signup}/>
+          <Route exact path='/shop' component={ShopCategory}/> 
+          <Route exact path='/order/review' component={Review}/> 
+          <Route exact path='/about' component={About}/>
+          <Route exact path='/contact' component={Contact}/>
+          <Route exact path='/account' component={Account}/>
 
+          {/* <Route exact path='/shop/categories' component={} /> */}
+          <Route exact path='/shop/category/products' component={Products} />
+          <Route exact path='/shop/category/products/:productId' component={ProductDetail} />
+          
           <Route component={NoMatch} />
         </Switch>
       </Router>

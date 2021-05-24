@@ -25,22 +25,6 @@ const Home = () => {
     //         }
     //     )
     // }
-
-    const postPromise = fetch('products')
-    
-
-    postPromise
-        .then(data => data.json())
-        .then(data => {
-            data.forEach((item) => {
-                console.log(item.id)
-                console.log(item.name);
-            });
-        })
-        .catch((err) => {
-            console.log(err)
-        });
-    
     
     return (
         <div>

@@ -1,11 +1,14 @@
 import {
     SET_SHOP_CATEGORIES,
-    SET_SHOP_PRODUCTS
+    SET_SHOP_PRODUCTS,
+    SELECTED_PRODUCT,
+    REMOVE_SELECTED_PRODUCT
 } from '../actions/types';
 
 const INITIAL_STATE = {
     categories: [],
-    products: []
+    products: [],
+    product: {}
 }
 
 export default function (state = INITIAL_STATE, action) {
@@ -20,6 +23,17 @@ export default function (state = INITIAL_STATE, action) {
                 ...state,
                 products: action.payload
             }
+        case SELECTED_PRODUCT:
+            return {
+                ...state,
+                product: action.payload
+            }
+        case REMOVE_SELECTED_PRODUCT:
+            return {
+                ...state,
+                product: {}
+            }
         default: return state;
     }
 }
+

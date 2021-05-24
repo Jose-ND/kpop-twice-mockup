@@ -25,18 +25,12 @@ export default function(state = INITIAL_STATE, action) {
         case FETCH_USER_REQUEST: 
             return {
                 ...state,
-                loading: true,
-                user: {}
+                loading: true
             }
         case USER_INITIAL_STATE:
             return {
                 ...state,
-                loading: false,
-                user: {
-                    ...state.user,
-                    isLoggedIn: null,
-                    error: ''
-                }
+                loading: false
             }
         case USER_LOGIN_SUCCESS:
             return {
@@ -49,12 +43,21 @@ export default function(state = INITIAL_STATE, action) {
             return {
                 ...state,
                 loading: false,
-                user: {},
                 error: action.payload
             }
         case USER_LOGOUT:
             return {
-                ...state
+                ...state,
+                loading: false,
+                user: {
+                    email: '',
+                    first_name: '',
+                    id: -1,
+                    last_name: '',
+                    isLoggedIn: null,
+                    password: ''
+                },
+                error: ''
             }
             
         default: return state;
