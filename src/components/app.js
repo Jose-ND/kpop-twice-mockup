@@ -10,7 +10,7 @@ import Home from './pages/home';
 import Shop from './pages/shop';
 import About from './pages/about';
 import Contact from './pages/contact';
-import Account from './pages/account';
+import Account from './auth/account';
 import Signin from './auth/signin';
 import Signup from './auth/signup';
 import Review from './order/review';

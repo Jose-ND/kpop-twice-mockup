@@ -68,7 +68,7 @@ function Navbar() {
                 <div className='navbar-icon-wrapper'>
 
                     {/* nav to searching functionality */}
-                    <Link to='/' className='icon-item'>
+                    <Link to='/account' className='icon-item'>
                         <FontAwesomeIcon icon='search'/>
                     </Link>
 

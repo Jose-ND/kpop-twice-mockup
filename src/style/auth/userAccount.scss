@@ -1,0 +1,140 @@
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li.type {
+	font-size: 14px;
+	color: $footer-grey;
+}
+
+li.value {
+	font-size: 18px;
+	color: $main-grey;
+}
+
+.whole-container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $light-grey;
+}
+
+.user-container {
+	width: 700px;
+	height: 700px;
+	background: $main-blue;
+	border-radius: 10px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.user-name {
+	padding-left: 8px;
+	margin-top: 40px;
+	font-size: 15px;
+	font-weight: 500;
+	color: $main-grey;
+}
+
+.top-container {
+	height: 200px;
+	background: $main-blue;
+}
+
+//bottom container
+.bottom-container {
+	height: 500px;
+	background: $white;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+//bottom-container items
+.info-cards,
+.account-btns {
+	margin: 10px 0;
+}
+
+.info-cards {
+	display: flex;
+	flex-direction: column;
+
+	.member-status,
+	.address {
+		box-sizing: border-box;
+
+		width: 650px;
+		border: 1px solid $footer-grey;
+		border-radius: 5px;
+		margin: 10px 0;
+		display: flex;
+	}
+
+	.member-status {
+		height: 60px;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 10px;
+	}
+
+	.address {
+		height: 100%;
+		flex-direction: column;
+		padding: 5px 10px;
+
+		.address-details {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 15px;
+		}
+	}
+}
+
+.account-btns {
+	display: flex;
+	justify-content: space-between;
+	width: 650px;
+	margin: 20px 0;
+
+	.logout-btn,
+	.settings-btn {
+		border-style: none;
+		height: 38px;
+		width: 243px;
+		border-radius: 20px;
+
+		font-size: 18px;
+		color: $white;
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.logout-btn {
+		background: $main-blue;
+	}
+	.settings-btn {
+		background: $main-grey;
+	}
+}
+
+.image-container {
+	background: #fff;
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	padding: 5px;
+	transform: translate(300px, 145px);
+
+	img {
+		border-radius: 50%;
+	}
+}
