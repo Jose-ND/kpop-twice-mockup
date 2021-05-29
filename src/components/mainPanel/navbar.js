@@ -1,7 +1,8 @@
 import React, { useState }from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useSelector } from 'react-redux';
 
 const dynamicLinks = [
     {
@@ -28,9 +29,22 @@ const dynamicLinks = [
 function Navbar() {
 
     const [click, setClick] = useState(false);
-
+    const isLoggedIn = useSelector(state => state.user.user.isLoggedIn)
+    const history = useHistory();
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
+    
+    const msg = () => {
+        if (!isLoggedIn || isLoggedIn === null) {
+            history.push('/signin');
+        }
+        else if (isLoggedIn) {
+            history.push('/account')
+        }
+        else {
+            null;
+        }
+    }
 
 
     return (
@@ -72,9 +86,9 @@ function Navbar() {
                         <FontAwesomeIcon icon='search'/>
                     </Link>
 
-                    <Link to='/signin' className='icon-item'>
+                    <div onClick={msg} className='icon-item'>
                         <FontAwesomeIcon icon='user'/>
-                    </Link>
+                    </div>
                     
                     {/* nav to viewing items in cart pop-up */}
                     <Link to='/order/review' className='icon-item'>

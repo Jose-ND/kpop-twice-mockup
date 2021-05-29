@@ -1,4 +1,11 @@
 import {
+	faFacebookF,
+	faEbay,
+	faInstagram,
+	faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+
+import {
 	faBars,
 	faSignOutAlt,
 	faEdit,
@@ -11,6 +18,7 @@ import {
 	faUser,
     faHandPeace
 } from "@fortawesome/free-solid-svg-icons";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 const Icons = () => {
@@ -18,6 +26,10 @@ const Icons = () => {
 		faBars,
 		faSignOutAlt,
 		faEdit,
+		faFacebookF,
+		faEbay,
+		faInstagram,
+		faTwitter,
 		faTimes,
 		faShoppingBag,
 		faPhone,

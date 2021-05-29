@@ -1,0 +1,93 @@
+.footer {
+	background-color: $footer-grey;
+	padding: 50px 0;
+
+	&__container {
+		max-width: 1170px;
+		background-color: $footer-grey;
+		margin: auto;
+	}
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-col {
+	width: 25%;
+	//remove maybe
+	padding: 5px 40px;
+
+	h4 {
+		font-size: 20px;
+		font-weight: 300;
+		color: $white;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+
+	.link {
+		font-size: 18px;
+		font-weight: 500;
+		color: $white;
+		text-decoration: none;
+		text-transform: capitalize;
+		transition: all 0.3s ease;
+	}
+
+	ul li:not(:last-child) {
+		margin-bottom: 10px;
+	}
+
+	ul li a:hover {
+		color: $main-grey;
+		padding-left: 2px;
+	}
+
+	//right side nesting
+
+	.right-side-link .side-detail {
+		color: $white;
+	}
+
+	.quick-contact a {
+		display: flex;
+		align-items: center;
+	}
+
+	.contact {
+		font-size: 18px;
+		text-decoration: none;
+		padding-top: 30px;
+
+		.text {
+			padding-left: 10px;
+		}
+	}
+
+	.social-links a {
+		font-size: 25px;
+		display: inline-block;
+		height: 60px;
+		width: 60px;
+		border: 2px solid $white;
+		margin: 0 10px 10px 0;
+		text-align: center;
+		line-height: 64px;
+		border-radius: 50%;
+		transition: all 0.5s ease;
+	}
+	.social-links a:hover {
+		background-color: $white;
+		color: $main-grey;
+	}
+}
+
+.row-copyright {
+	color: $white;
+	font-size: 16px;
+	position: relative;
+	top: 45px;
+	left: 10px;
+}

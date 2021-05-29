@@ -2,7 +2,8 @@ import {
     USER_REQUEST,
     USER_INITIAL_STATE,
     USER_LOGIN_SUCCESS,
-    USER_LOGIN_FAILURE
+    USER_LOGIN_FAILURE,
+    USER_LOGOUT
 } from './types';
 
 export const fetchUserRequest = () => {
@@ -23,6 +24,10 @@ export const userLoginFailure = (error) => {
         type: USER_LOGIN_FAILURE,
         payload: error
     }
+}
+
+export const userLogout = () => {
+    return { type: USER_LOGOUT }
 }
 
 export const userInitialState = () => {

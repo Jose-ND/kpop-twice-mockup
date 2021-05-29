@@ -1,10 +1,19 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
+import { userLogout } from '../../actions/user';
 
 
 const UserAccount = () => {
     const some = useSelector(state => state.user.user);
-    const { first_name, last_name, email,  } = some;
+    const { first_name, last_name, email } = some;
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    const logoutUser = () => {
+        history.push('/')
+        dispatch(userLogout());
+    }
 
     return (
         <div className='user-container'>
@@ -115,11 +124,11 @@ const UserAccount = () => {
                     </div>
                 </div>
                 <div className='account-btns'>
-                    <button className='logout-btn'>
+                    <button className='logout-btn' onClick={logoutUser}>
                         logout
                     </button>
                     <button className='settings-btn'>
-                        settings
+                        update details
                     </button>
                 </div>
             </div>

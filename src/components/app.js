@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useSelector } from 'react-redux';
 import Icons from '../helpers/icons';
 import axios from 'axios';
 
@@ -17,6 +17,7 @@ import Review from './order/review';
 import Products from './shop/products';
 import ProductDetail from './shop/productDetail';
 import ShopCategory from './shop/shopCategory';
+import Footer from './mainPanel/footer';
 
 
 
@@ -24,6 +25,12 @@ axios.defaults.baseURL = 'http://127.0.0.1:5000/';
 
 function App() {
   Icons();
+  const isLoggedIn = useSelector(state => state.user.user.isLoggedIn);
+  const authorizedPages = () => {
+
+    return (<Route exact path='/account' component={Account}/>)
+  }
+  
   return (
     <div>
       <Router>
@@ -35,8 +42,10 @@ function App() {
           <Route exact path='/order/review' component={Review}/> 
           <Route exact path='/about' component={About}/>
           <Route exact path='/contact' component={Contact}/>
-          <Route exact path='/account' component={Account}/>
-
+          {isLoggedIn === true ? authorizedPages() : null}
+          
+          {/* temp route */}
+          <Route exact path='/footer' component={Footer} />
           {/* <Route exact path='/shop/categories' component={} /> */}
           <Route exact path='/shop/category/products' component={Products} />
           <Route exact path='/shop/category/products/:productId' component={ProductDetail} />
