@@ -4,7 +4,10 @@
 
 @import "./navigation.scss";
 @import "./footer.scss";
-@import "./arrivals.scss";
+
+//feed
+@import "./feed/arrivals.scss";
+@import "./feed/categories.scss";
 
 //auth
 @import "./auth/userAccount.scss";

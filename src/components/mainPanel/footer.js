@@ -48,10 +48,26 @@ const Footer = () => {
                     <div className='footer-col'>
                         <h4>follow us</h4>
                         <div className='social-links right-side-link'>
-                            <Link to='/' className='side-detail'><FontAwesomeIcon icon={['fab', 'twitter']}/></Link>
-                            <Link to='/' className='side-detail'><FontAwesomeIcon icon={['fab', 'ebay']}/></Link>
-                            <Link to='/' className='side-detail'><FontAwesomeIcon icon={['fab', 'facebook-f']}/></Link>
-                            <Link to='/' className='side-detail'><FontAwesomeIcon icon={['fab', 'instagram']}/></Link>
+                            <a href='#' 
+                                target='_blank' 
+                                className='side-detail'>
+                                <FontAwesomeIcon icon={['fab', 'twitter']}/>
+                            </a>
+                            <a href='https://www.ebay.com/usr/kpoptwice'
+                                target='_blank'
+                                className='side-detail'>
+                                <FontAwesomeIcon icon={['fab', 'ebay']} />
+                            </a>
+                            <a href='#' 
+                                target='_blank' 
+                                className='side-detail'>
+                                <FontAwesomeIcon icon={['fab', 'facebook-f']}/>
+                            </a>
+                            <a href='#' 
+                                target='_blank' 
+                                className='side-detail'>
+                                <FontAwesomeIcon icon={['fab', 'instagram']}/>
+                            </a>
                         </div>
                     </div>
 

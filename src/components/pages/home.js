@@ -8,6 +8,8 @@ import Arrivals from '../feed/arrivals'
 import axios from 'axios'
 
 import Pic from '../../../static/assets/images/TWICE-carasoul-edited.jpg'; //sample
+import Footer from '../mainPanel/footer';
+import Categories from '../feed/categories';
 
 
 
@@ -32,13 +34,15 @@ const Home = () => {
 
             <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={8000} >
 
-                <img className='carousel-item' src='http://via.placeholder.com/1400x450'/>
+                <img className='carousel-item' src='../../../static/assets/images/TWICE-carasoul-edited.jpg'/>
                 <img className='carousel-item' src='http://via.placeholder.com/1400x450'/>
                 <img className='carousel-item' src='http://via.placeholder.com/1400x450'/>
 
             </Carousel>
-           <Arrivals/>
-           {/* <Card/> */}
+            <Arrivals />
+            <Categories/>
+            {/* <Card/> */}
+            <Footer />
         </div>
     )
 }

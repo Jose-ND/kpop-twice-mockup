@@ -1,31 +1,16 @@
-import React, {useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
-import p1 from '../../../static/assets/images/mexican.jpg';
-import p2 from '../../../static/assets/images/albums.jpg';
-import Card from './card';
-
-const Arrivals = () => {
-    
 
 
-    // useEffect(() => {
-    //     fetch('/category').then(response => {
-    //         if(response.ok){
-    //             return response.json
-    //         }
-    //     }).then(data => setArrival(data))
-    // },[])
-
-    
-
+const Categories = () => {
     return (
-        <div className='arrivals'>
-            <div className='arrivals__wrapper'>
-                <div className='arrivals-box'>
-                    <h4>new arrivals</h4>
+        <div className='categories-feed'>
+            <div className='categories-feed__wrapper'>
+                <div className='categories-feed-box'>
+                    <h4>categories</h4>
                     <div className='squares-wrapper'>
                         <Link to='/' className='square square__item'>
-                            <img className='img-card' src='../../../static/assets/images/mexican.jpg'/>
+                            <img className='img-card' src='http://via.placeholder.com/400x400'/>
                         </Link>
                         <Link to='/' className='square sqaure__item'>
                             <img className='img-card' src='../../../static/assets/images/mexican.jpg'/>
@@ -55,4 +40,4 @@ const Arrivals = () => {
     )
 }
 
-export default Arrivals;
+export default Categories;
