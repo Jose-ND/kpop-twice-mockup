@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import p1 from '../../../static/assets/images/mexican.jpg';
 import p2 from '../../../static/assets/images/albums.jpg';
-import Card from './card';
+
 
 const Arrivals = () => {
     

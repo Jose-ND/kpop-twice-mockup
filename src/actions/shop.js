@@ -1,6 +1,7 @@
 import {
     REMOVE_SELECTED_PRODUCT,
     SELECTED_PRODUCT,
+    SET_SHOP_ARRIVALS,
     SET_SHOP_CATEGORIES,
     SET_SHOP_PRODUCTS
 } from './types';
@@ -15,6 +16,12 @@ export const setShopProducts = (products) => {
     return {
         type: SET_SHOP_PRODUCTS,
         payload: products
+    }
+}
+export const setShopArrivals = (arrivals) => {
+    return {
+        type: SET_SHOP_ARRIVALS,
+        payload: arrivals
     }
 }
 
