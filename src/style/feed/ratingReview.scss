@@ -26,10 +26,10 @@
 			content: "";
 			z-index: 0;
 			position: absolute;
-			top: -2px;
-			bottom: -2px;
-			left: 30px;
-			right: 30px;
+			top: -5px;
+			bottom: -5px;
+			left: 50px;
+			right: 50px;
 			background-color: $main-grey;
 		}
 
@@ -39,8 +39,8 @@
 			position: absolute;
 			top: 30px;
 			bottom: 30px;
-			left: -2px;
-			right: -2px;
+			left: -5px;
+			right: -5px;
 			background-color: $main-grey;
 		}
 	}

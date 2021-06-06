@@ -60,7 +60,6 @@ function Navbar() {
             </div>
 
             <div className='right-side'>
-
                 <div className='menu-icon' onClick={handleClick}>
                     {click ? (<FontAwesomeIcon icon='times'/>) : (<FontAwesomeIcon icon='bars'/>)} 
                 </div>

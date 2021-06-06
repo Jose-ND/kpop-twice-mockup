@@ -1,0 +1,66 @@
+.card {
+	background-color: $main-blue;
+	padding: 30px 0;
+
+	&__container {
+		max-width: 1170px;
+		background-color: $main-blue;
+		margin: auto;
+	}
+}
+
+.card-content {
+	height: 500px;
+	padding: 0 110px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; //this deals with up and down axis (y)
+	align-items: center;
+	color: white;
+
+	.card-item {
+		padding: 30px 0;
+	}
+
+	.letra::first-letter {
+		text-transform: capitalize;
+	}
+}
+
+.greeting-wrapper {
+	font-size: 50px;
+	font-weight: 700;
+}
+
+.info-text {
+	font-size: 40px;
+	font-weight: 500;
+}
+
+input {
+	font-family: "Hind Madurai", sans-serif;
+	font-size: 20px;
+	padding: 0 0 0 20px;
+}
+
+.input-btn {
+	display: inline-flex;
+
+	.email-input {
+		width: 400px;
+		height: 45px;
+		border-radius: 10px;
+		border: none;
+		text-transform: capitalize;
+		margin-right: 15px;
+	}
+
+	.email-btn {
+		color: $white;
+		padding: 4px 25px;
+		font-size: 25px;
+		border-radius: 10px;
+		background-color: transparent;
+		border: 2px solid $white;
+	}
+}

@@ -1,11 +1,160 @@
-//footer
+//laptop screen size and below
 @media (max-width: 933px) {
+	//general
+	h4 {
+		font-size: 3.5rem;
+	}
+	//navabr
+	//carousel
+	//categories
+	//rating-review
+	//newsletter
+
+	.greeting-wrapper {
+		font-size: 4rem;
+	}
+	.info-text {
+		font-size: 3rem;
+	}
+
+	//footer
 	.footer-col {
 		width: 50%;
 		margin-bottom: 30px;
 	}
 }
-@media (max-width: 574px) {
+
+//ipad size and below
+@media (max-width: 768px) {
+	//general
+	h4 {
+		font-size: 3.5rem;
+	}
+	//navabr
+	//carousel
+	//categories
+	//rating-review
+
+	//newsletter
+	.greeting-wrapper {
+		font-size: 3rem;
+	}
+	.info-text {
+		font-size: 2rem;
+	}
+
+	//footer
+	.footer-col {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+
+//mobile devices and below
+
+@media (max-width: 580px) {
+	//general
+	//navabr
+	//carousel
+	//categories
+	//rating-review
+	//newsletter
+
+	.input-btn {
+		display: flex;
+		flex-direction: column;
+
+		.email-input {
+			width: 400px;
+			height: 45px;
+			margin: 0 0 20px 0;
+		}
+
+		.email-btn {
+			font-size: 25px;
+		}
+	}
+	.card-content {
+		padding: 0 40px;
+	}
+
+	.greeting-wrapper {
+		font-size: 3rem;
+	}
+	// .info-text {
+	// 	font-size: 3rem;
+	// }
+
+	//footer
+	.footer-col {
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	//general
+	h4 {
+		font-size: 2.8rem;
+	}
+	//navabr
+	//carousel
+	//categories
+	//rating-review
+	.corner-box {
+		height: 350px !important;
+		&::before {
+			left: 20px !important;
+			right: 20px !important;
+		}
+
+		&::after {
+			top: 20px !important;
+			bottom: 20px !important;
+		}
+
+		.text-review-box {
+			padding: 0 15px;
+			.text-container {
+				font-size: 3rem;
+			}
+		}
+		.star-pag-box {
+			button {
+				width: 60px;
+				height: 10px;
+			}
+		}
+	}
+
+	//newsletter
+	.input-btn {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		//padding: 0 15px;
+
+		.email-input {
+			width: 100%;
+			height: 40px;
+			margin: 0 0 20px 0;
+		}
+
+		.email-btn {
+			font-size: 25px;
+			padding: 1px 0;
+		}
+	}
+	.card-content {
+		padding: 0 30px;
+	}
+
+	.greeting-wrapper {
+		font-size: 2.8rem;
+	}
+	.info-text {
+		font-size: 2.5rem;
+	}
+	//footer
 	.footer-col {
 		width: 100%;
 	}

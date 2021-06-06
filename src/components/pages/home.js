@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Carousel from 'react-elastic-carousel';
 
 import Navbar from '../mainPanel/navbar';
-import Card from '../feed/card';
+import EmailCard from '../feed/emailCard';
 import Arrivals from '../feed/arrivals'
 import Categories from '../feed/categories';
 import RatingReview from '../feed/ratingReview';
@@ -48,7 +48,7 @@ const Home = () => {
 
     return (
         <div>
-            <Navbar/>
+            {/* <Navbar/> */}
 
             {/* <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={8000} >
 
@@ -60,7 +60,7 @@ const Home = () => {
             <Arrivals />
             <Categories />
             <RatingReview />
-            {/* <Card/> */}
+            <EmailCard/>
             <Footer />
         </div>
     )

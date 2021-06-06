@@ -21,6 +21,11 @@ body {
 	-webkit-tap-highlight-color: transparent;
 }
 
+::-webkit-input-placeholder {
+	color: $main-grey;
+	opacity: 0.8;
+}
+
 h4 {
 	font-size: 40px;
 	color: $white;
