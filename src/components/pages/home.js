@@ -48,7 +48,7 @@ const Home = () => {
 
     return (
         <div>
-            {/* <Navbar/> */}
+            <Navbar/>
 
             {/* <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={8000} >
 

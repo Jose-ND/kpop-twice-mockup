@@ -1,0 +1,125 @@
+.navbar {
+	background-color: $footer-grey;
+	padding: 10px 0;
+
+	&__container {
+		max-width: 1170px;
+		background-color: blue;
+		margin: auto;
+	}
+}
+
+.navbar__wrapper {
+	width: 100%;
+	padding: 0 40px;
+	display: flex;
+	justify-content: space-between;
+}
+
+//left side stuff
+.navbar-logo-wrapper {
+	//will be deleted as soon as logo gets done
+	color: $white;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+//right side stuff
+.right-side {
+	color: $white;
+	display: inline-flex;
+	.group-links {
+		padding: 0 25px;
+	}
+}
+
+.nav-menu {
+	a:first-of-type {
+		padding: 0 10px 0 0;
+	}
+	a:last-child {
+		padding: 0 0 0 10px;
+	}
+	.navbar-link {
+		color: $white;
+		text-decoration-line: none;
+		font-size: 25px;
+		padding: 0 10px;
+	}
+	.navbar-link .mobile-text {
+		padding: 10px 0;
+	}
+
+	a:hover {
+		background-color: $white;
+		color: $main-grey;
+		transition: all 0.2s ease-out;
+	}
+}
+
+.navbar-icon-wrapper {
+	display: flex;
+	align-items: center;
+
+	a:first-of-type {
+		padding: 0 10px 0 0;
+	}
+	a:last-child {
+		padding: 0 0 0 10px;
+	}
+	.icon-item {
+		color: $white;
+		font-size: 24px;
+		padding: 0 10px;
+	}
+}
+
+//burger
+.search-mobile {
+	display: none;
+	padding: 10px 0;
+	&__form {
+		margin-left: 20px;
+	}
+	&__input {
+		padding: 0 45px 0 20px;
+		border-radius: 20px;
+		border: none;
+		outline: none;
+	}
+	&__button {
+		color: $footer-grey;
+		font-size: 20px;
+		display: inline-flex;
+
+		cursor: pointer;
+		transform: translate(-35px, 4px);
+	}
+}
+.mobile-menu-icons {
+	display: none;
+	font-size: 25px;
+
+	.menu-icon {
+		display: inline-flex;
+		padding: 0 10px;
+		cursor: pointer;
+	}
+}
+.group-links.active {
+	border: none;
+	outline: none;
+}
+.mobile-account {
+	padding: 10px 50px;
+	.text {
+		padding: 5px 40px;
+	}
+
+	a:hover {
+		background-color: $white;
+		color: $main-grey;
+		border-color: $main-grey;
+		transition: all 0.2s ease-out;
+	}
+}
