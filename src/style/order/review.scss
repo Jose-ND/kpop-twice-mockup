@@ -1,6 +1,10 @@
 .review {
-	grid-row: content-s/content-e;
-	grid-column: s/e;
+	max-width: 1170px;
+	margin: 0 auto;
+
+	&__container {
+		padding: 0 40px;
+	}
 
 	&__form {
 		display: grid;

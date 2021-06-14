@@ -1,3 +1,5 @@
+
+
 //USER
 
 export const FETCH_USER_REQUEST = 'FETCH_USER_REQUEST';
@@ -5,10 +7,15 @@ export const USER_LOGIN_SUCCESS = 'USER_LOGIN_SUCCESS';
 export const USER_LOGIN_FAILURE = 'USER_LOGIN_FAILURE';
 export const USER_LOGOUT= 'USER_LOGOUT';
 
-export const USER_REGISTER_SUCCESS= 'USER_REGISTER_SUCCESS';
-export const USER_REGISTER_FAILURE= 'USER_REGISTER_FAILURE';
+//USER REGISTER
+export const USER_REGISTER_SUCCESS = 'USER_REGISTER_SUCCESS';
+export const USER_REGISTER_FAILURE = 'USER_REGISTER_FAILURE';
 
-//shop 
+//USER CART
+export const ADD_CART_PRODUCT = 'ADD_CART_PRODUCT';
+export const SET_CART_PRODUCTS = 'SET_CART_PRODUCTS'; //temp action *relates to settingup first products inside your shopping bag icon*
+
+//SHOP
 export const SET_SHOP_CATEGORIES = 'SET_SHOP_CATEGORIES';
 export const SET_SHOP_PRODUCTS = 'SET_SHOP_PRODUCTS';
 export const SET_SHOP_ARRIVALS = 'SET_SHOP_ARRIVALS';

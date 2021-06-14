@@ -57,6 +57,7 @@ const Home = () => {
                 <img className='carousel-item' src='http://via.placeholder.com/1400x450'/>
 
             </Carousel> */}
+
             <Arrivals />
             <Categories />
             <RatingReview />

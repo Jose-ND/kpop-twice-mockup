@@ -3,7 +3,9 @@ import {
     USER_INITIAL_STATE,
     USER_LOGIN_SUCCESS,
     USER_LOGIN_FAILURE,
-    USER_LOGOUT
+    USER_LOGOUT,
+    ADD_CART_PRODUCT,
+    SET_CART_PRODUCTS
 } from './types';
 
 export const fetchUserRequest = () => {
@@ -32,4 +34,18 @@ export const userLogout = () => {
 
 export const userInitialState = () => {
     return { type: USER_INITIAL_STATE }
+}
+
+//temporary actions
+export const addCartProduct = (product) => {
+    return {
+        type: ADD_CART_PRODUCT,
+        payload: product
+    }
+}
+
+export const fetchCartProducts = () => {
+    return {
+        type: SET_CART_PRODUCTS,
+    }
 }

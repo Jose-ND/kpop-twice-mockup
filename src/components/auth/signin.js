@@ -3,8 +3,6 @@ import PageTitle from '../pageTitle';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-//import { connect } from 'react-redux';
-
 import SignInForm from './signinForm';
 
 

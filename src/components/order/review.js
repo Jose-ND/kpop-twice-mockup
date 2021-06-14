@@ -1,13 +1,18 @@
 import React from 'react'
+import Navbar from '../mainPanel/navbar';
+import PageTitle from '../pageTitle';
+import ReviewForm from './reviewForm';
 
 const Review = () => {
     return (
         <div>
-            hello worl shop review
-            {/* alternative navbar */}
-            {/* searchbar component  */}
-            {/* category component => leads to products*/ }
-            {/* footer */}
+            <Navbar/>
+            <div className='review'>
+                <div className="review__container">
+                    <PageTitle className='review__page-title' title='Order Review' />
+                    <ReviewForm className='review__form'/>
+                </div>
+            </div>
         </div>
     )
 }

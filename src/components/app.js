@@ -42,7 +42,7 @@ function App() {
           <Route exact path='/order/review' component={Review}/> 
           <Route exact path='/about' component={About}/>
           <Route exact path='/contact' component={Contact}/>
-          {isLoggedIn === true ? authorizedPages() : null}
+          {isLoggedIn && authorizedPages()}
           
           {/* temp route */}
           <Route exact path='/footer' component={Footer} />

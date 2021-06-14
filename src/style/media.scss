@@ -78,6 +78,11 @@
 			font-size: 25px;
 			padding: 0;
 		}
+		a:hover {
+			background-color: $white;
+			color: $main-grey;
+			transition: all 0.2s ease-out;
+		}
 	}
 	.mobile-account {
 		width: 100%;
@@ -90,6 +95,13 @@
 			width: 100%;
 			border: 2px solid white;
 			border-radius: 5px;
+		}
+
+		a:hover {
+			background-color: $white;
+			color: $main-grey;
+			border-color: $main-grey;
+			transition: all 0.2s ease-out;
 		}
 	}
 	//carousel

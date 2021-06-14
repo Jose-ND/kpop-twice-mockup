@@ -4,7 +4,7 @@
 
 	&__container {
 		max-width: 1170px;
-		background-color: blue;
+		background-color: $footer-grey;
 		margin: auto;
 	}
 }
@@ -48,12 +48,6 @@
 	}
 	.navbar-link .mobile-text {
 		padding: 10px 0;
-	}
-
-	a:hover {
-		background-color: $white;
-		color: $main-grey;
-		transition: all 0.2s ease-out;
 	}
 }
 
@@ -114,12 +108,5 @@
 	padding: 10px 50px;
 	.text {
 		padding: 5px 40px;
-	}
-
-	a:hover {
-		background-color: $white;
-		color: $main-grey;
-		border-color: $main-grey;
-		transition: all 0.2s ease-out;
 	}
 }
