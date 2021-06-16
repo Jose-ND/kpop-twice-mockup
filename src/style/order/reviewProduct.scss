@@ -21,11 +21,44 @@
 		grid-column: quantity-s/quantity-e;
 		font-size: 18px;
 		font-weight: 600;
-		color: #666666;
+		color: $main-grey;
+		display: flex;
+		flex-direction: row;
+	}
+	&__qty {
+		padding: 0 10px;
+	}
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 25px;
+		width: 25px;
+		border: none;
+		border-radius: 5px;
+
+		background-color: $footer-grey;
+		color: $white;
+
+		&:hover {
+			background-color: $main-blue;
+			transition: all 0.3s ease-in-out;
+			cursor: pointer;
+		}
 	}
 	&__price {
 		grid-column: price-s/price-e;
 		justify-self: end;
+	}
+	&__cancel {
+		font-size: 18px;
+		color: $cancel-red;
+
+		&:hover {
+			color: $cancel-red-hover;
+			transition: all 0.3s ease-out;
+			cursor: pointer;
+		}
 	}
 }
 

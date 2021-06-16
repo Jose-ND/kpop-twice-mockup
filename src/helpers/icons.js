@@ -17,7 +17,9 @@ import {
 	faSearch,
 	faUser,
 	faHandPeace,
-	faTimesCircle
+	faTimesCircle,
+	faPlus,
+	faMinus
 } from "@fortawesome/free-solid-svg-icons";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -39,7 +41,9 @@ const Icons = () => {
 		faSearch,
 		faUser,
 		faHandPeace,
-		faTimesCircle
+		faTimesCircle,
+		faPlus,
+		faMinus
 	);
 };
 

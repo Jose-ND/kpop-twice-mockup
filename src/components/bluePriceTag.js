@@ -1,9 +1,11 @@
 import React from 'react';
 
-const BluePriceTag = ({className}) => {
+const BluePriceTag = ({ className, title }) => {
+    const value = title;
+    const realValue = value.toFixed(2);
     return (
         <div className={`${className} blue-price-tag`}>
-            ${title}
+            ${realValue}
         </div>
     )
 }

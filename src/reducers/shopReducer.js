@@ -10,7 +10,9 @@ const INITIAL_STATE = {
     categories: [],
     products: [],
     product: {},
-    arrivals: []
+    arrivals: [],
+    shipping: 2.00,
+    tax: 1.50
 }
 
 export default function (state = INITIAL_STATE, action) {

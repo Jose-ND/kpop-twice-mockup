@@ -5,7 +5,11 @@ import {
     USER_LOGIN_FAILURE,
     USER_LOGOUT,
     SET_CART_PRODUCTS,
-    ADD_CART_PRODUCT
+    ADD_CART_PRODUCT,
+    DELETE_CART_PRODUCT,
+    DECREASE_CART_PRODUCT,
+    INCREASE_CART_PRODUCT,
+    CHANGE_QTY_CART_PRODUCT,
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -114,6 +118,34 @@ export default function(state = INITIAL_STATE, action) {
             return {
                 ...state,
                 cartProducts: cartProducts
+            }
+        case DELETE_CART_PRODUCT:
+            const deleteCP = action.payload
+            var updateCartProducts = []
+            state.cartProducts.map(cartProduct => {
+                if (cartProduct._id !== deleteCP) {
+                    updateCartProducts.push(cartProduct)
+                }
+            })
+            return {
+                ...state,
+                cartProducts: updateCartProducts
+            }
+        case DECREASE_CART_PRODUCT:
+            return {
+                ...state,
+                cartProducts: state.cartProducts.map(product => product._id === action.payload ? {...product, qty: product.qty - 1} : product)
+            }
+        case INCREASE_CART_PRODUCT:
+            return {
+                ...state,
+                cartProducts: state.cartProducts.map(product => product._id === action.payload ? {...product, qty: product.qty + 1} : product)
+            }
+        //this is not needed right now
+        case CHANGE_QTY_CART_PRODUCT:
+            return {
+                ...state,
+                cartProducts: state.cartProducts.map(product => product._id === action.payload.id ? {...product, qty: action.payload.value} : product)
             }
         case SET_CART_PRODUCTS:
             return {

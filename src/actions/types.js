@@ -12,7 +12,11 @@ export const USER_REGISTER_SUCCESS = 'USER_REGISTER_SUCCESS';
 export const USER_REGISTER_FAILURE = 'USER_REGISTER_FAILURE';
 
 //USER CART
+export const CHANGE_QTY_CART_PRODUCT = 'CHANGE_QTY_CART_PRODUCT';
 export const ADD_CART_PRODUCT = 'ADD_CART_PRODUCT';
+export const DELETE_CART_PRODUCT = 'DELETE_CART_PRODUCT';
+export const DECREASE_CART_PRODUCT = 'DECREASE_CART_PRODUCT';
+export const INCREASE_CART_PRODUCT = 'INCREASE_CART_PRODUCT';
 export const SET_CART_PRODUCTS = 'SET_CART_PRODUCTS'; //temp action *relates to settingup first products inside your shopping bag icon*
 
 //SHOP
