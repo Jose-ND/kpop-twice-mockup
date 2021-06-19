@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import axios from 'axios'
 import Navbar from '../mainPanel/navbar'
 import CategoryComponent from './categoryComponent'
@@ -21,10 +21,10 @@ const ShopCategory = () => {
         fetchCategories();
     }, [])
     return (
-        <div>
+        <React.Fragment>
             <Navbar />
             <CategoryComponent />
-        </div>
+        </React.Fragment>
     )
 }
 

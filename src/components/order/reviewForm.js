@@ -20,11 +20,10 @@ const ReviewForm = ({ className, subtotal }) => {
     const dispatch = useDispatch();
     const history = useHistory();
     
-    
     let fixedSubtotal = unfixedSubtotal.toFixed(2)
     let tax = decimalTax.toFixed(2);
     let shipping = decimalShipping.toFixed(2);
-    
+
     const unfixedTotal = subtotal + decimalShipping + decimalTax;
     let fixedTotal = unfixedTotal.toFixed(2);
 
@@ -58,7 +57,6 @@ const ReviewForm = ({ className, subtotal }) => {
                 <div className="review-product__cancel" onClick={() => {dispatch(deleteCartProduct(_id))}}>
                     <FontAwesomeIcon icon='times-circle' />
                 </div>
-                
             </div>
         )
     })

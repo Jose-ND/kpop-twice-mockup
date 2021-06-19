@@ -116,7 +116,15 @@
 	.info-text {
 		font-size: 3rem;
 	}
-
+	//order summary
+	.review-detail {
+		display: grid;
+		grid-template-columns: [title-s] 1fr [title-e] 6fr [price-s] 1fr [price-e];
+		grid-template-rows: 1fr;
+	}
+	.form-button__button {
+		margin-top: 150px;
+	}
 	//footer
 	.footer-col {
 		width: 50%;
@@ -152,7 +160,12 @@
 	.card-content {
 		padding: 0 40px;
 	}
-
+	//order summary
+	.review-detail {
+		display: grid;
+		grid-template-columns: [title-s] 1fr [title-e] 5fr [price-s] 1fr [price-e];
+		grid-template-rows: 1fr;
+	}
 	//footer
 	.footer-col {
 		width: 100%;
@@ -246,8 +259,71 @@
 	.info-text {
 		font-size: 2.8rem;
 	}
-	//footer
-	.footer-col {
-		width: 100%;
+
+	//order summary
+	.review {
+		&__form {
+			display: grid;
+			grid-template-rows: [legend-s] 30px [legend-e products-s] 400px [products-e line-s] 26px [line-e buttons-s] 38px [buttons-e];
+			grid-template-columns: [back-s] 50px [back-e space-s] 95px [space-e proceed-s] 1fr [proceed-e] 1fr;
+			grid-row-gap: 15px;
+		}
+	}
+	.review-product {
+		display: grid;
+		grid-template-columns: [image-s] 80px [image-e title-s] 1fr [title-e quantity-s] 1fr [quantity-e price-s] 0.5fr [price-e] 40px;
+		grid-template-rows: [s] 1fr [e];
+		grid-column-gap: 15px;
+		&__image {
+			grid-column: image-s/image-e;
+		}
+		&__title {
+			grid-column: title-s/title-e;
+			font-size: 12px;
+		}
+		&__quantity {
+			grid-column: quantity-s/quantity-e;
+			font-size: 15px;
+			font-weight: 600;
+			color: $main-grey;
+			display: flex;
+			flex-direction: row;
+		}
+		&__qty {
+			padding: 0 10px;
+		}
+	}
+	.review-detail {
+		display: grid;
+		grid-template-columns: [title-s] 1fr [title-e] 3fr [price-s] 1fr [price-e];
+		grid-template-rows: 1fr;
+	}
+	.blue-price-tag {
+		color: #8dc8ff;
+		font-size: 12px;
+		font-weight: 600;
+	}
+	.form-button {
+		&__button {
+			height: 38px;
+			width: 150px;
+			font-size: 14px;
+		}
+		&__gray-button {
+			width: 110px;
+		}
+	}
+	.review-form__button {
+		height: 25px;
+		width: 25px;
+		border: none;
+		border-radius: 5px;
+
+		background-color: $footer-grey;
+		color: $white;
+		//footer
+		.footer-col {
+			width: 100%;
+		}
 	}
 }
